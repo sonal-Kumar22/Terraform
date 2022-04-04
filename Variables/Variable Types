@@ -1,0 +1,35 @@
+Variable Types
+
+So to prevent user from entering wrong data type in variables we use type.
+
+Types:
+- String
+- List(String)
+- List(object)
+
+
+Variables.tf file
+variable username {
+    type = string
+    default = "World"
+}
+
+variable age {
+    type = number
+}
+
+Output.tf file
+output printname {
+       value = "Hello, ${var.username}. Your age is ${var.age}"
+}
+
+
+Command: terraform plan -var "username=Sonal AK" -var "age=xyz"
+erro should come : Error: Invalid value for input variable
+│ 
+│ The argument -var="age=..." does not contain a valid value for variable "age": a number is required.
+
+Correct command: terraform plan -var "username=Sonal AK" -var "age=66"
+O/p: printname = "Hello, Sonal AK. Your age is 66"
+
+
