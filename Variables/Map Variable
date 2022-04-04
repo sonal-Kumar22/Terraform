@@ -1,0 +1,48 @@
+Map Variable example:
+
+var.tf
+variable userages {
+      type = map
+      default = {
+          sonal = 22
+          kommal = 26
+      }
+}
+
+output.tf 
+output usrages {
+     value = "My name is sonal and my age is ${lookup(var.userages,"sonal")}"
+}
+
+Command: terraform plan
+O/P: usrages = "My name is sonal and my age is 22"
+
+Note: here if we want to print komal, then we need to change the name sonal to komal from both places in output.tf file
+We can resolve this by: using map variable Dynamically
+
+How to use map variable Dynamically
+var.tf
+variable userages {
+      type = map
+      default = {
+          sonal = 22
+          komal = 26
+      }
+}
+
+variable usernames {
+    type = string
+}
+
+created a new variable named "usernames"
+
+Output.tf
+output usrages {
+     value = "My name is ${var.usernames} and my age is ${lookup(var.userages,var.usernames)}"
+}
+
+Command: terraform plan
+ar.usernames
+  Enter a value: sonal
+  usrages = "My name is sonal and my age is 22"
+
