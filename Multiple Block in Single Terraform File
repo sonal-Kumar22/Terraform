@@ -1,0 +1,20 @@
+Multiple Block in Single Terraform File
+
+1.Create a directory for this file
+- mkdir hello-world-multiple-blocks
+
+2.Create file
+- vi hello-world.tf
+
+3.File contents
+-
+output "firstoutputblock" {
+        value = "this is first block"
+}
+
+output "secondoutputblock" {
+        value= "this is second output block"
+}
+
+4.Run terraform plan command
+
