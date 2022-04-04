@@ -1,0 +1,17 @@
+1.Create a file with .json extension
+- vi hello-world.tf.json
+
+2.Json format inside file:
+-->
+{
+        "output" : {
+                "hello" : {
+                        "value" : "Hello Sonal!!"
+                }       
+        }
+}
+
+save by : ESC + :wq!
+3.Command to view this file : cat hello-world.tf.json
+
+4.Run terraform plan command
