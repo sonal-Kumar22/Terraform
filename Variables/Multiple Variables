@@ -1,0 +1,39 @@
+Multiple Variables
+
+If the default value of variable is set like 
+variables.tf
+variable username {
+    default = "World"
+}
+
+Output.tf
+output printname {
+       value = "Hello, ${var.username}"
+}
+
+In here, if we run terraform plan then output will be
+- printname = "Hello, World"
+
+And if we run command by passing value then,terraform plan -var "username=Sonal Kumar"
+- printname = "Hello, Sonal Kumar"
+
+so, terraform will ask value only when the value is not assigned, here value of username is not asked because in case value is not given then default
+value should be considered that is World
+
+Example of multiple variables
+variables.tf file
+variable username {
+    default = "World"
+}
+
+variable age {}
+
+Output.tf file
+output printname {
+       value = "Hello, ${var.username}. Your age is ${var.age}"
+}
+
+Run command : terraform plan -var "username=AK singh" -var "age=23"
+
+
+
