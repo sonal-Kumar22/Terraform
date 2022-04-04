@@ -1,0 +1,51 @@
+TFVARs Files in terraform
+
+These files contains all the variable values from which terraform can read the values instead of passing it using -var command in Terraform CLI
+Note: this file should always be named as terraform.tfvars
+
+first.tf file
+variable userage {
+      type = number
+}
+
+variable username {
+    type = string
+}
+
+output userages {
+     value = "My name is ${var.username} and my age is ${var.userage}"
+}
+
+terraform.tfvars file
+userage = 30
+username = "sonal"
+
+Command : terraform plan
+O/P: userages = "My name is sonal and my age is 30"
+
+To change the tfvars file name and use that name - custom tfvars file
+
+first.tf file
+variable userage {
+      type = number
+}
+
+variable username {
+    type = string
+}
+
+output userages {
+     value = "My name is ${var.username} and my age is ${var.userage}"
+}
+
+terraform.tfvars file
+userage = 30
+username = "sonal"
+
+development.tfvars file
+userage = 10
+username = "Komal Kumar"
+
+command : terrafrom plan -var-file=development.tfvars
+O/p: userages = "My name is Komal Kumar and my age is 10"
+
