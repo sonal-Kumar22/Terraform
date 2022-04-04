@@ -1,0 +1,24 @@
+Read Environment Variable in Terraform Configurations
+
+command : export TF_VAR_variable-name=ver-value
+TF_VAR this prefix helps terraform to identify the env. variable
+
+Variables.tf file
+variable username {
+    type = string
+    default = "World"
+}
+
+variable age {
+    type = number
+}
+
+hello-variable.tf file
+output printname {
+       value = "Hello, ${var.username}. Your age is ${var.age}"
+}
+
+Commands:
+- export TF_VAR_username="Sonal" TF_VAR_age=12
+- terraform plan
+
