@@ -20,3 +20,7 @@ var.users
 o/p: userslist = "List of users are: SS "
 
 Real life exp: to assign multiple SG's to an EC2 instance.
+
+Command to execute all in one command: terraform plan -var 'users=["A","B"]'
+
+
