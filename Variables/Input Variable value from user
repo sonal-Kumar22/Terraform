@@ -1,0 +1,34 @@
+1.Create a variable.tf file
+- vi hello-variable.tf
+
+File contents:
+->
+variable username {}
+
+output printname {
+       value = "Hello, ${var.username}"
+}
+
+here a variable block named username has been created which will store the value passed by the user upon running the terraform plan command.
+the output block will print the Hello message with the username passed by the user above.
+OR
+We can segrigate this into 2 different files:
+- variables.tf
+variable username {}
+
+-output.tf
+output printname {
+       value = "Hello, ${var.username}"
+}
+
+
+2.Run terraform plan command
+- it will ask to enter the username value to pass in variable
+then the output block will print the line hello username value passed.
+
+Pass variable value from command
+-> terraform plan -var "username=Sonal Kumar"
+with this command we would need not provide user value separately, it will be passed through this one command itself.
+
+
+
