@@ -1,0 +1,125 @@
+Join() function example :-
+
+var.tf file File :
+variable users {
+    type = list
+    default = ["A","B"]
+}
+
+
+Output.tf File :
+output userslist {
+     value = "List of users are: ${join(",",var.users)}"
+}
+
+Command: terrafotm plan
+O/p: userslist = "List of users are: A,B"
+
+In case we use separator "->" instead of "," then
+Output.tf File :
+output userslist {
+     value = "List of users are: ${join("->",var.users)}"
+}
+
+O/p: userslist = "List of users are: A->B"
+
+upper() function example :-
+
+var.tf file
+variable users {
+    type = list
+    default = ["Komal","xyz"]
+}
+
+
+output.tf file
+#join() function
+output userslist {
+     value = "List of users are: ${join("->",var.users)}"
+}
+
+#upper() function
+output upperCase {
+     value = "List of users are: ${upper(var.users[0])}"
+}
+
+
+Command: terraform plan
+
+O/p: 
+upperCase = "List of users are: KOMAL"
+userslist = "List of users are: Komal->xyz"
+
+lower() function example :-
+
+var.tf file
+variable users {
+    type = list
+    default = ["komal","XYZ"]
+}
+
+output.tf file
+#join() function
+output userslist {
+     value = "List of users are: ${join("->",var.users)}"
+}
+
+#upper() function
+output upperCase {
+     value = "List of users are: ${upper(var.users[0])}"
+}
+
+#lower() function
+output lowerCase {
+     value = "List of users is: ${lower(var.users[1])}"
+}
+
+
+Command : terraform plan
+O/P: 
+lowerCase = "List of users is: xyz"
+upperCase = "List of users are: KOMAL"
+userslist = "List of users are: komal->XYZ"
+
+
+#title case - first letter of word will be capital
+
+var.tf file
+variable users {
+    type = list
+    default = ["komal","XYZ","sss"]
+}
+
+
+output.tf file
+#join() function
+output userslist {
+     value = "List of users are: ${join("->",var.users)}"
+}
+
+#upper() function
+output upperCase {
+     value = "List of users are: ${upper(var.users[0])}"
+}
+
+#lower() function
+output lowerCase {
+     value = "List of users is: ${lower(var.users[1])}"
+}
+
+#title case - first letter of word will be capital
+output TitleCase {
+     value = "List of users is: ${title(var.users[2])}"
+}
+
+Command: terraform plan
+O/P:
+TitleCase = "List of users is: Sss"
+lowerCase = "List of users is: xyz"
+upperCase = "List of users are: KOMAL"
+userslist = "List of users are: komal->XYZ->sss"
+
+
+  
+
+
