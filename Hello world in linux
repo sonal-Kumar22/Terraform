@@ -1,0 +1,26 @@
+Commands:
+
+1.Create a directory where terraform hellow world file will be created
+- mkdir Terraform
+
+2.Create a terraform file
+- vi hellow-world.tf
+
+3.Code in hellow-world.tf file
+--> 
+// this is comment
+# this is also comment
+
+output hello {
+     value = "Hellow World Sonal!!"
+}
+
+4.Command to view file creates : ls
+
+5.Run the plan command inside the directory where this hellow-world.tf file is situated
+- terraform plan
+
+Terraform plan command basically tells us what all changes will be applied when you'll run terraform apply
+
+
+
