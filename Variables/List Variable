@@ -1,0 +1,22 @@
+Example:
+
+var.tf file
+variable users {
+    type = list
+}
+
+
+Output.tf file
+output userslist {
+     value = "List of users are: ${var.users[0]} "
+}
+
+
+Command: terraform plan
+enter list : 
+var.users
+  Enter a value: ["SS","KK"]
+  
+o/p: userslist = "List of users are: SS "
+
+Real life exp: to assign multiple SG's to an EC2 instance.
