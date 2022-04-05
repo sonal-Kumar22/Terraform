@@ -1,15 +1,19 @@
 #create a github repository using terraform
 
-#provider file
-provider "github" {
-    token = "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"
-}
-
-#repository creation block
+#repository creation block 1
 resource "github_repository" "exampleRepo" {
   name        = "Repo-creation-using-Terraform"
   description = "Creating github repository using terraform"
   visibility = "public"
-#to create readme file
+#to create readme file automatically with repo creation
+  auto_init = true
+}
+
+#repository creation block 2
+resource "github_repository" "exampleRepo2" {
+  name        = "Repo-creation-using-Terraform-2"
+  description = "Creating github repository using terraform"
+  visibility = "public"
+#to create readme file automatically with repo creation
   auto_init = true
 }
