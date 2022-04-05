@@ -18,3 +18,5 @@ Command to destroy just 1 resource among the many resources :
 
 Ex: terraform destroy --target github_repository.exampleRepo
 
+Q) Why does the github access key gets revoked in minutes after execution..?
+
