@@ -1,4 +1,9 @@
 #provider file
-provider "github" {}
+provider "github" {
+    token = "${var.token}"
+}
+
+
+
 
 
