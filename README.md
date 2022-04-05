@@ -25,5 +25,7 @@ terraform output instance_id : here 'instance_id' is the output variable defined
 
 terraform providers : this command lists the provider plugins at their locations
 
+terraform validate : command checks whether the terraform configuration is correct
+
 
 
