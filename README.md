@@ -27,5 +27,8 @@ terraform providers : this command lists the provider plugins at their locations
 
 terraform validate : command checks whether the terraform configuration is correct
 
+terraform show : command to view tfstate file on terminal
+
+
 
 
