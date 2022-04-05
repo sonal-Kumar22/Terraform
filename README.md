@@ -36,6 +36,7 @@ Note:
   - cd ~
   - cd .aws
   - ls : to view all files in here (the files will be config , credentials)
+  - cat config : command to view config file on terminal
 
 The value of default credentials remains active forever hence we need not run aws configure every time.
 
