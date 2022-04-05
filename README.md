@@ -19,3 +19,8 @@ Setting variables via the command line will not save the new value.
 terraform output : command to display the outputs on terminal
 
 terraform output instance_id : here 'instance_id' is the output variable defined which stores instance id.
+
+terraform providers : this command lists the provider plugins at their locations
+
+
+
