@@ -29,6 +29,17 @@ terraform validate : command checks whether the terraform configuration is corre
 
 terraform show : command to view tfstate file on terminal
 
+Note: 
+- aws configure : this command configures AWS credentials 
+- upon executing this command .aws file gets created in a fixed location i.e /home/sonal/.aws in this laptop's case
+- command to view .aws file through terminal : 
+  - cd ~
+  - cd .aws
+  - ls : to view all files in here (the files will be config , credentials)
+
+The value of default credentials remains active forever hence we need not run aws configure every time.
+
+
 
 
 
