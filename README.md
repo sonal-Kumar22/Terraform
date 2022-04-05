@@ -14,6 +14,7 @@ terraform apply command : creates the resources described in the plan
 terraform destroy command : will terminates the resources defined in your configuration
 
 terraform apply -var 'instance_name=YetAnotherName' : command to change the variable value in variables.tf file containing instance name and updating the                                                         exisitng. Here 'instance_name' is the variable defined in variables.tf file
+
 terraform apply --auto-approve : we need not enter 'yes' later
 
 Setting variables via the command line will not save the new value.
