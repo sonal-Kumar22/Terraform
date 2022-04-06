@@ -1,0 +1,8 @@
+AWS_REGION = "eu-west-1"
+VPCcidrRange = "172.0.0.0/16"
+vpc-tenancy = "default"
+pub-sub-cidr = "172.0.1.0/24"
+pvt-sub-cidr = "172.0.2.0/24"
+instanceType = "t2.micro"
+PRIVATE_KEY_PATH = "ec2-key-pair"
+PUBLIC_KEY_PATH = "ec2-key-pair.pub"
