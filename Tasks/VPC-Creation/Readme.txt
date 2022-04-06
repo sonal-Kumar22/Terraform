@@ -9,5 +9,5 @@ Ex: ec2-key-pair.pub --> public key
 Links Referred:
 - https://medium.com/@aliatakan/terraform-create-a-vpc-subnets-and-more-6ef43f0bf4c1
 - https://jhooq.com/terraform-ssh-into-aws-ec2/
-
+- https://www.edureka.co/community/72330/how-to-do-ssh-in-ec2-instance-using-terraform
 
