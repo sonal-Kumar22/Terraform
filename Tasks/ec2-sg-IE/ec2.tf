@@ -35,6 +35,7 @@ resource "aws_security_group" "EC2-Instance-SG" {
   }
 }
 
+#print the id of the SG created above
 output SecurityGroupDetails {
   value = "${aws_security_group.EC2-Instance-SG.id}" #here 'id' is attribute reference of security group
 }
