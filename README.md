@@ -40,7 +40,7 @@ Note:
 
 The value of default credentials remains active forever hence we need not run aws configure every time.
 
-
+terraform fmt // format the code
 
 
 
