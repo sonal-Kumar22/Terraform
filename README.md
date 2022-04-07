@@ -42,5 +42,10 @@ The value of default credentials remains active forever hence we need not run aw
 
 terraform fmt // format the code
 
+Note:
+- Terraform does not recommend to use terraform taint command
+- Terraform does not help us to understand whether the nginx we installed in ec2 has been installed correctly or not as in configuration for that we       prefer configuration tool like ansible. In terraform we can use alternative like provisioner but terraform does not recommend using it.
+
+
 
 
