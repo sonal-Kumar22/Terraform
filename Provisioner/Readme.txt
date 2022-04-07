@@ -8,3 +8,5 @@ The file provisioner is used to copy files or directories from the machine execu
 
 We'll cover "file" here
 Video link : https://www.youtube.com/watch?v=mmdwTz_98yA&list=PL6XT0grm_TfgdaAjTmLb4QedMCCMQHISm&index=41
+
+Note : If provisioner does not runs successfully , it marks the resources as "taint" in tfstate file.
