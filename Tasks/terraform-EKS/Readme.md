@@ -1,3 +1,5 @@
+Doc referred :https://adamtheautomator.com/terraform-eks-module/
+
 All the resources required to provision an EKS cluster:
 
 - VPC
